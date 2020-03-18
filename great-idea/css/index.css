@@ -75,7 +75,7 @@ html{
 	align-content: center;
 	background-color: lightskyblue;
 	width: 90%;
-	position: fixed;
+	position: sticky;
 	margin-left: 5%;
 	padding-left: 5%;
 	top:0;
@@ -165,6 +165,7 @@ h1{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding: 40px;
+	position: relative;
 }
 
 .ctntBoxBordered p{
@@ -177,6 +178,18 @@ h1{
 	border-radius: 5px;
 	padding: 10px 50px;
 	color: black;
+	position: absolute;
+	bottom: 20px;
+}
+
+.topAndBottomBorder{
+	border-top: 1px dotted black;
+	border-bottom: 1px dotted black;
+}
+
+.ctntBoxBordered ul{
+	list-style-type: square;
+	margin-bottom: 30px;
 }
 
 .ctntBoxLargeMargin {
@@ -244,5 +257,19 @@ h2{
 
 .services-header-img {
 	width: 90%;
+	height: 400px;
 	margin-left: 5%;
+	object-fit: cover;
+}
+
+/* change max to min to see mobile version*/
+@media only screen and (max-device-width: 480px) {
+	[class*="line"] {
+		width: 100%;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	[class*="ctntBox"] {
+		width: 100%;
+	}
 }
